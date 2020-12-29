@@ -6,14 +6,13 @@ public class UserRegistration {
     private String UName;
     private String EmailId;
     private String Password;
-    private byte Gender;
-    private byte Position;
+    private String Gender;
+    private String Position;
 
     public UserRegistration() {
-
     }
 
-    public UserRegistration(String UName, String emailId, String password, byte gender, byte position) {
+    public UserRegistration(String UName, String emailId, String password, String gender, String position) {
         this.UName = UName;
         EmailId = emailId;
         Password = password;
@@ -45,19 +44,19 @@ public class UserRegistration {
         Password = password;
     }
 
-    public byte getGender() {
+    public String getGender() {
         return Gender;
     }
 
-    public void setGender(byte gender) {
+    public void setGender(String gender) {
         Gender = gender;
     }
 
-    public byte getPosition() {
+    public String getPosition() {
         return Position;
     }
 
-    public void setPosition(byte position) {
+    public void setPosition(String position) {
         Position = position;
     }
 
@@ -67,8 +66,8 @@ public class UserRegistration {
                 "UName='" + UName + '\'' +
                 ", EmailId='" + EmailId + '\'' +
                 ", Password='" + Password + '\'' +
-                ", Gender=" + Gender +
-                ", Position=" + Position +
+                ", Gender='" + Gender + '\'' +
+                ", Position='" + Position + '\'' +
                 '}';
     }
 }

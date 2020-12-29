@@ -20,14 +20,11 @@ public class RegistrationController {
         ModelMap model = new ModelMap();
         model.addAttribute("uname", reg.getUName());
         model.addAttribute("email", reg.getEmailId());
-        model.addAttribute("Gender", reg.getGender() == Integer.parseInt("1")? "Male" : "Female");
-        model.addAttribute("Position", reg.getPosition() == Integer.parseInt("2") ? "Entering" : "Leaving");
+        model.addAttribute("gender", reg.getGender());
+        model.addAttribute("position", reg.getPosition());
 
         ModelAndView view = new ModelAndView("user-detail");
-        return view.addObject("regObj", reg);
-       /* ModelAndView modelAndView = new ModelAndView("user-detail");
-        modelAndView.addObject("regObj",reg);
-        return modelAndView;*/
-
+        view.addObject("regObj", reg);
+        return view;
     }
 }
